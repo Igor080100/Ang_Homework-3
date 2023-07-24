@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  background-color: rgb(179, 179, 179);
+  padding: 1rem;
+}
+
+.test {
+  background-color: orange;
+  padding: 1rem;
+}
+
+.show {
+  background-color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+img {
+  width: 500px;
+  height: 300px;
+}
+
+button {
+  padding: 1rem;
+  margin: 1rem;
+}

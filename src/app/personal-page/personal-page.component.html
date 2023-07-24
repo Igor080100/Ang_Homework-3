@@ -1,0 +1,27 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="test">
+      <p>Дата: {{currentDate | date}}</p>
+      <p>Ціна: {{price | currency:'UAH': 'symbol': '1.00'}}</p>
+      <p>Знижка: {{discount | percent}}</p>
+      <p *ngIf="switcher">TRUE</p>
+      <p *ngIf="switcher !== true">FALSE</p>
+    </div>
+    <div class="show">
+      <div *ngIf="selectedTransport === 'car'">
+        <app-car></app-car>
+      </div>
+      <div *ngIf="selectedTransport === 'plane'">
+        <app-plane></app-plane>
+      </div>
+      <div *ngIf="selectedTransport === 'ship'">
+        <app-ship></app-ship>
+      </div>
+      <div>
+        <button (click)="selectedTransport = 'car'">Show Car</button>
+        <button (click)="selectedTransport = 'plane'">Show Plane</button>
+        <button (click)="selectedTransport = 'ship'">Show Ship</button>
+      </div>
+    </div>
+  </div>
+</div>
